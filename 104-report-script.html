@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>104人力銀行數位商務營利模式與競爭戰略 - 個案報告</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- KaTeX for formulas -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF6600',
+                            dark: '#1F1F1F',
+                            light: '#FAFAFA',
+                            gray: '#737373',
+                            bg: '#F5F5F7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .slide {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .slide.active {
+            display: flex;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .quadrant-bg {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 16px 16px;
+        }
+    </style>
+</head>
+<body class="bg-brand-bg text-brand-dark font-sans overflow-hidden h-screen flex flex-col justify-between">
+
+    <!-- TOP HEADER / PROGRESS BAR -->
+    <header class="bg-white border-b border-gray-200 px-6 py-3 flex justify-between items-center z-10 select-none">
+        <div class="flex items-center space-x-3">
+            <span class="bg-brand-orange text-white text-xs px-2 py-1 rounded font-bold">104 個案分析</span>
+            <h1 class="text-sm font-bold text-brand-dark hidden md:block">國立臺北商業大學 數位商務與管理</h1>
+        </div>
+        <div class="flex items-center space-x-6">
+            <span class="text-sm font-medium text-brand-gray" id="slide-indicator">Slide 1 / 10</span>
+            <div class="w-48 bg-gray-200 h-2 rounded-full overflow-hidden">
+                <div id="progress-bar" class="bg-brand-orange h-full transition-all duration-300" style="width: 10%;"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN SLIDES CONTAINER -->
+    <main class="flex-1 max-w-7xl w-full mx-auto p-4 md:p-8 flex flex-col justify-center items-center overflow-y-auto">
+        
+        <!-- Slide 1: Cover -->
+        <div class="slide active flex-col justify-center items-center text-center max-w-4xl w-full h-full" id="slide-1">
+            <div class="text-brand-orange text-5xl mb-6"><i class="fa-solid fa-briefcase"></i></div>
+            <h2 class="text-4xl md:text-5xl font-black text-brand-dark tracking-tight leading-tight mb-4">
+                雙邊平台下的數位營收引擎：<br>
+                <span class="text-brand-orange">104人力銀行</span> 數位商務營利模式剖析
+            </h2>
+            <p class="text-lg md:text-xl text-brand-gray mb-8">
+                結合課堂理論、五力分析與 LinkedIn 跨國戰略對標
+            </p>
+            <div class="grid grid-cols-2 gap-4 max-w-xl mx-auto p-6 bg-white rounded-xl shadow-sm border border-gray-100 text-left">
+                <div>
+                    <p class="text-xs text-brand-gray">報告課程</p>
+                    <p class="text-sm font-bold text-brand-dark">數位商務與管理</p>
+                </div>
+                <div>
+                    <p class="text-xs text-brand-gray">指導教授</p>
+                    <p class="text-sm font-bold text-brand-dark">吳家州 老師</p>
+                </div>
+                <div>
+                    <p class="text-xs text-brand-gray">報告日期</p>
+                    <p class="text-sm font-bold text-brand-dark">2026 年 6 月 15 日</p>
+                </div>
+                <div>
+                    <p class="text-xs text-brand-gray">報告學生</p>
+                    <p class="text-sm font-bold text-brand-dark">林于瑾、陳映帆 (進二技二A)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Case Overview -->
+        <div class="slide flex-col justify-center w-full max-w-5xl h-full" id="slide-2">
+            <h2 class="text-3xl font-extrabold text-brand-dark mb-6 border-l-8 border-brand-orange pl-4">
+                企業簡介與市場地位 <span class="text-brand-orange text-lg block md:inline md:ml-2">台灣人力資源的絕對領頭羊</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-lg text-brand-orange mb-2"><i class="fa-solid fa-history mr-2"></i>創立與歷史</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            1996 年成立，是台灣第一家網路求職求才平台，也是首家上市的網路公司。近三十年持續引領台灣人力市場。
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                        <h3 class="font-bold text-lg text-brand-orange mb-2"><i class="fa-solid fa-bullseye mr-2"></i>核心願景</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            「幫助求職者找到好工作，幫助企業找到好人才」，近年更拓展到「職涯守護者」的角色，覆蓋整個生命週期。
+                        </p>
+                    </div>
+                </div>
+                <div class="bg-orange-50 p-8 rounded-2xl border border-orange-100 flex flex-col justify-between h-full">
+                    <p class="text-brand-orange font-bold text-sm uppercase tracking-wider mb-4">關鍵營運數據 (2026)</p>
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between border-b border-orange-100 pb-3">
+                            <span class="text-gray-600 font-medium">求職會員數</span>
+                            <span class="text-2xl font-black text-brand-orange">800 萬+ <span class="text-xs font-normal text-gray-500">會員</span></span>
+                        </div>
+                        <div class="flex items-center justify-between border-b border-orange-100 pb-3">
+                            <span class="text-gray-600 font-medium">台灣市場佔有率</span>
+                            <span class="text-2xl font-black text-brand-orange">70% <span class="text-xs font-normal text-gray-500">第一名</span></span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-gray-600 font-medium">產品生態系</span>
+                            <span class="text-sm font-bold text-brand-dark">104獵才 / 職涯診所 / 企業大師 / 高年級</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Two-Sided Market -->
+        <div class="slide flex-col justify-center w-full max-w-5xl h-full" id="slide-3">
+            <h2 class="text-3xl font-extrabold text-brand-dark mb-6 border-l-8 border-brand-orange pl-4">
+                雙邊市場理論與網絡效應 <span class="text-brand-orange text-lg block md:inline md:ml-2">用「免費」拉動「收費」的平台邏輯</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center flex flex-col justify-between">
+                    <span class="text-brand-orange text-3xl mb-2"><i class="fa-solid fa-users"></i></span>
+                    <h3 class="font-bold text-lg mb-2">求職者端 (C 端)</h3>
+                    <p class="text-sm text-brand-gray mb-4">提供免費履歷、一鍵投遞、職涯診所、健診等完整價值補貼。</p>
+                    <span class="inline-block mx-auto bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full font-bold">補貼對象 (免費)</span>
+                </div>
+                <div class="bg-brand-dark text-white p-6 rounded-xl text-center flex flex-col justify-between shadow-lg">
+                    <span class="text-brand-orange text-3xl mb-2"><i class="fa-solid fa-arrows-spin"></i></span>
+                    <h3 class="font-bold text-lg text-brand-orange mb-2">104 中介平台</h3>
+                    <div class="my-3 py-2 bg-neutral-800 rounded font-mono text-sm text-yellow-400">
+                        梅特卡夫定律：<br>
+                        $$V \propto N_c \times N_b$$
+                    </div>
+                    <p class="text-xs text-neutral-400">當 $N_c$ 越多，對 B 端的吸引力與收費轉化率呈指數型成長。</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-100 text-center flex flex-col justify-between">
+                    <span class="text-brand-orange text-3xl mb-2"><i class="fa-solid fa-building"></i></span>
+                    <h3 class="font-bold text-lg mb-2">求才企業端 (B 端)</h3>
+                    <p class="text-sm text-brand-gray mb-4">付費刊登、人才庫訂閱、HR SaaS 工具、精確廣告曝光。</p>
+                    <span class="inline-block mx-auto bg-orange-100 text-brand-orange text-xs px-3 py-1 rounded-full font-bold">付費來源 (變現)</span>
+                </div>
+            </div>
+            <div class="mt-6 bg-orange-50 p-4 rounded-xl border border-orange-100 text-sm text-brand-orange flex items-center">
+                <i class="fa-solid fa-circle-info mr-3 text-lg"></i>
+                <span><strong>跨邊網絡效應 (Cross-side Network Effect)：</strong> 求職者越多，吸引企業越多；企業職缺越多，吸引求職者越多，形成極高的競爭門檻。</span>
+            </div>
+        </div>
+
+        <!-- Slide 4: Course Integration I -->
+        <div class="slide flex-col justify-center w-full max-w-5xl h-full" id="slide-4">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-3xl font-extrabold text-brand-dark border-l-8 border-brand-orange pl-4">
+                    課堂理論對接 I：主流數位營利模式與成功門檻
+                </h2>
+                <div class="text-right text-xs text-brand-gray space-y-1">
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-bold">對接講義 S__45473799.jpg</span>
+                    <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-bold block mt-1">對接講義 S__45473800.jpg</span>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="min-w-full bg-white rounded-xl overflow-hidden shadow-sm border border-gray-200">
+                    <thead class="bg-gray-100 text-brand-dark text-sm">
+                        <tr>
+                            <th class="py-3 px-4 text-left font-bold">講義主流模式</th>
+                            <th class="py-3 px-4 text-left font-bold">104 實際商業運作</th>
+                            <th class="py-3 px-4 text-left font-bold">講義成功門檻與要件</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs text-gray-700 divide-y divide-gray-100">
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-brand-orange">廣告營收模式</td>
+                            <td class="py-3 px-4">B端企業購買「焦點職缺」、「急徵置頂」，或首頁橫幅品牌廣告。</td>
+                            <td class="py-3 px-4 font-medium text-emerald-700"><i class="fa-solid fa-check mr-1"></i>流量 + 有商業價值的受眾 (104掌握高精準求職流量)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-brand-orange">訂閱營收模式</td>
+                            <td class="py-3 px-4">企業付費訂閱「人才庫搜尋系統」（按月/按年收費）。</td>
+                            <td class="py-3 px-4 font-medium text-emerald-700"><i class="fa-solid fa-check mr-1"></i>高留存習慣 + 持續提供價值 (企業不間斷人才儲備需求)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-brand-orange">平台/抽成合作模式</td>
+                            <td class="py-3 px-4">104 獵才顧問 (Executive Search)，媒合年薪百萬高階職位，按比例抽成。</td>
+                            <td class="py-3 px-4 font-medium text-emerald-700"><i class="fa-solid fa-check mr-1"></i>媒合能力 + 信任機制 (20年品牌沉澱信任)</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4 font-bold text-brand-orange">手續費營收模式</td>
+                            <td class="py-3 px-4">「104企業大師 (HR SaaS)」提供考勤計薪、收取系統帳號手續費。</td>
+                            <td class="py-3 px-4 font-medium text-emerald-700"><i class="fa-solid fa-check mr-1"></i>便利性、省時省力，解決明顯痛點 (解決中小企業管理繁雜)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Slide 5: Course Integration II -->
+        <div class="slide flex-col justify-center w-full max-w-5xl h-full" id="slide-5">
+            <div class="flex justify-between items-start mb-4">
+                <h2 class="text-3xl font-extrabold text-brand-dark border-l-8 border-brand-orange pl-4">
+                    課堂理論對接 II：營利模式四象限與組合收費
+                </h2>
+                <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded font-bold">對接講義 S__45473801.jpg</span>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <!-- 2x2 Quadrant Graph (Native tailwind visual) -->
+                <div class="grid grid-cols-2 gap-2 p-4 bg-white rounded-2xl shadow-sm border border-gray-200 quadrant-bg relative">
+                    <!-- Y Axis Line -->
+                    <div class="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-300"></div>
+                    <!-- X Axis Line -->
+                    <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300"></div>
+                    
+                    <!-- Q1 (Top Right): Low Freq x High Value -->
+                    <div class="p-4 bg-orange-50/70 rounded-xl h-36 flex flex-col justify-between border border-orange-200">
+                        <span class="text-xs font-bold text-brand-orange bg-white px-2 py-0.5 rounded shadow-sm self-start">低頻 × 高價值 (精品型)</span>
+                        <div class="text-xs text-gray-800">
+                            <strong class="block text-brand-dark">104 高階獵才顧問</strong>
+                            成功後抽取主管年薪 15-25%
+                        </div>
+                    </div>
+
+                    <!-- Q2 (Top Left): High Freq x High Value -->
+                    <div class="p-4 bg-orange-100/70 rounded-xl h-36 flex flex-col justify-between border border-orange-300 relative">
+                        <span class="text-xs font-bold text-emerald-700 bg-white px-2 py-0.5 rounded shadow-sm self-start">高頻 × 高價值 (最理想)</span>
+                        <div class="text-xs text-gray-800">
+                            <strong class="block text-brand-dark">VIP 獨家人才庫訂閱</strong>
+                            大廠不間斷篩選, 每季/年訂閱金額達數十萬
+                        </div>
+                    </div>
+
+                    <!-- Q3 (Bottom Right): Low Freq x Low Value -->
+                    <div class="p-4 bg-red-50/70 rounded-xl h-36 flex flex-col justify-between border border-red-200">
+                        <span class="text-xs font-bold text-red-700 bg-white px-2 py-0.5 rounded shadow-sm self-start">低頻 × 低價值 (最危險)</span>
+                        <div class="text-xs text-gray-800">
+                            <strong class="block text-brand-dark">C 端一對一履歷健診</strong>
+                            單次低廉甚至免費，用以鎖定流量與黏著度
+                        </div>
+                    </div>
+
+                    <!-- Q4 (Bottom Left): High Freq x Low Value -->
+                    <div class="p-4 bg-orange-50/70 rounded-xl h-36 flex flex-col justify-between border border-orange-200">
+                        <span class="text-xs font-bold text-brand-orange bg-white px-2 py-0.5 rounded shadow-sm self-start">高頻 × 低價值 (薄利多銷)</span>
+                        <div class="text-xs text-gray-800">
+                            <strong class="block text-brand-dark">一般職缺刊登 (訂閱)</strong>
+                            中小企業每月數千元，累積龐大長尾客戶
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-brand-orange"><i class="fa-solid fa-shapes mr-2"></i>104 的組合式收費商模</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        根據講義理論，單一營收模式風險過高。104 完美地將 <strong>「訂閱 + 廣告」</strong> 與 <strong>「抽成 + 服務費」</strong> 進行橫向與縱向重組：
+                    </p>
+                    <ul class="text-xs text-gray-700 space-y-2">
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-brand-orange mt-0.5 mr-2"></i> <strong>訂閱（人才庫）+ 廣告（職缺置頂）</strong>：確保大廠與中小企業的高留存和穩定底薪營收。</li>
+                        <li class="flex items-start"><i class="fa-solid fa-circle-check text-brand-orange mt-0.5 mr-2"></i> <strong>獵才抽成 + 企業大師手續費</strong>：開闢第二曲線，突破平台廣告的增長天花板。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: 104 vs. LinkedIn -->
+        <div class="slide flex-col justify-center w-full max-w-5xl h-full" id="slide-6">
+            <h2 class="text-3xl font-extrabold text-brand-dark mb-6 border-l-8 border-brand-orange pl-4">
+                戰略對標：104人力銀行 vs. LinkedIn <span class="text-brand-orange text-lg block md:inline md:ml-2">工具型平台與社群型平台的終極交鋒</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 104 Panel -->
+                <div class="bg-white p-6 rounded-2xl border-t-8 border-brand-orange shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-brand-dark">104人力銀行</h3>
+                        <span class="text-xs bg-orange-100 text-brand-orange font-bold px-2 py-1 rounded">在地工具霸主</span>
+                    </div>
+                    <ul class="text-sm space-y-4 text-gray-600">
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-bold text-brand-dark">定位屬性</span>
+                            <span><strong>工具型平台 (Utility)</strong></span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-bold text-brand-dark">使用者習慣</span>
+                            <span>找工作才打開，找到後即關閉</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-bold text-brand-dark">C端收費模式</span>
+                            <span class="text-emerald-600 font-bold">完全免費（全面補貼）</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-bold text-brand-dark">B端優勢</span>
+                            <span>超高本土覆蓋、在地 HR 系統相容</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- LinkedIn Panel -->
+                <div class="bg-white p-6 rounded-2xl border-t-8 border-blue-600 shadow-sm">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-bold text-brand-dark">LinkedIn (領英)</h3>
+                        <span class="text-xs bg-blue-100 text-blue-600 font-bold px-2 py-1 rounded">全球社群龍頭</span>
+                    </div>
+                    <ul class="text-sm space-y-4 text-gray-600">
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-bold text-brand-dark">定位屬性</span>
+                            <span><strong>社交型平台 (Social-Networking)</strong></span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-bold text-brand-dark">使用者習慣</span>
+                            <span>建立職場人脈、日常專業分享 (高頻)</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-bold text-brand-dark">C端收費模式</span>
+                            <span class="text-brand-orange font-bold">付費訂閱制 (Premium)</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-bold text-brand-dark">B端優勢</span>
+                            <span>跨國人才網路、精準 B2B 品牌廣告</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Porter's Five Forces -->
+        <div class="slide flex-col justify-center w-full max-w-5xl h-full" id="slide-7">
+            <h2 class="text-3xl font-extrabold text-brand-dark mb-6 border-l-8 border-brand-orange pl-4">
+                線上求職市場波特五力分析 <span class="text-brand-orange text-lg block md:inline md:ml-2">104 的護城河是否依然穩固？</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <!-- Threat of New Entrants -->
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                    <div class="text-red-500 mb-2"><i class="fa-solid fa-user-plus text-xl"></i></div>
+                    <h3 class="font-bold text-sm mb-1 text-brand-dark">新進入者威脅</h3>
+                    <span class="text-xs font-bold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded">中等</span>
+                    <p class="text-xs text-brand-gray mt-2">Dcard、Threads 或 PTT 科技工作板等非正規求職管道興起。</p>
+                </div>
+                <!-- Supplier Bargaining Power -->
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                    <div class="text-red-500 mb-2"><i class="fa-solid fa-users-line text-xl"></i></div>
+                    <h3 class="font-bold text-sm mb-1 text-brand-dark">求職者議價力</h3>
+                    <span class="text-xs font-bold bg-orange-100 text-brand-orange px-2 py-0.5 rounded">中高</span>
+                    <p class="text-xs text-brand-gray mt-2">「少子化」加劇，特別是軟體工程師等高精尖人才具備挑選平台的權力。</p>
+                </div>
+                <!-- Competitive Rivalry -->
+                <div class="bg-brand-dark text-white p-4 rounded-xl shadow-md text-center flex flex-col justify-between">
+                    <div>
+                        <div class="text-brand-orange mb-2"><i class="fa-solid fa-shield-halved text-xl"></i></div>
+                        <h3 class="font-bold text-sm mb-1">現有競爭對手</h3>
+                        <span class="text-xs font-bold bg-red-100 text-red-800 px-2 py-0.5 rounded">極高</span>
+                    </div>
+                    <p class="text-xs text-neutral-300 mt-2">傳統對手持續低價；<strong>Cake (蛋糕求職)</strong> 以現代化 UI 精準瓜分年輕族群。</p>
+                </div>
+                <!-- Buyer Bargaining Power -->
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                    <div class="text-red-500 mb-2"><i class="fa-solid fa-building-user text-xl"></i></div>
+                    <h3 class="font-bold text-sm mb-1 text-brand-dark">企業雇主議價力</h3>
+                    <span class="text-xs font-bold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded">中等</span>
+                    <p class="text-xs text-brand-gray mt-2">雖有高轉換成本，但少子化促使企業分流招募預算至多個平台。</p>
+                </div>
+                <!-- Threat of Substitutes -->
+                <div class="bg-white p-4 rounded-xl border border-gray-100 shadow-sm text-center">
+                    <div class="text-red-500 mb-2"><i class="fa-solid fa-rotate text-xl"></i></div>
+                    <h3 class="font-bold text-sm mb-1 text-brand-dark">替代品威脅</h3>
+                    <span class="text-xs font-bold bg-red-100 text-red-800 px-2 py-0.5 rounded">高</span>
+                    <p class="text-xs text-brand-gray mt-2">企業越過中介求職網，直接利用官網、LinkedIn 社群直接完成招募。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Business Model Canvas -->
+        <div class="slide flex-col justify-center w-full max-w-5xl h-full" id="slide-8">
+            <h2 class="text-2xl font-extrabold text-brand-dark mb-4 border-l-8 border-brand-orange pl-4">
+                104人力銀行商業模式畫布 (BMC) <span class="text-brand-orange text-lg block md:inline md:ml-2">一站式全景透析</span>
+            </h2>
+            <div class="grid grid-cols-5 gap-2 text-xs">
+                <!-- Col 1: Key Partners & Key Activities -->
+                <div class="flex flex-col gap-2">
+                    <div class="bg-white p-3 rounded-lg border border-gray-100 h-1/2 flex flex-col justify-between">
+                        <strong class="text-brand-orange"><i class="fa-solid fa-handshake mr-1"></i> 關鍵合作夥伴</strong>
+                        <p class="text-gray-600">大專院校、職訓機構、獵頭顧問、政府就業局。</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border border-gray-100 h-1/2 flex flex-col justify-between">
+                        <strong class="text-brand-orange"><i class="fa-solid fa-gears mr-1"></i> 關鍵活動</strong>
+                        <p class="text-gray-600">平台系統維運、AI履歷配對研發、企業品牌行銷、HR SaaS工具開發。</p>
+                    </div>
+                </div>
+                <!-- Col 2: Key Resources & Value Prop -->
+                <div class="flex flex-col gap-2">
+                    <div class="bg-white p-3 rounded-lg border border-gray-100 h-1/2 flex flex-col justify-between">
+                        <strong class="text-brand-orange"><i class="fa-solid fa-database mr-1"></i> 關鍵資源</strong>
+                        <p class="text-gray-600">30年累積的龐大履歷與企業資料庫、AI 演算法、高度品牌信任。</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border border-gray-100 h-1/2 flex flex-col justify-between">
+                        <strong class="text-brand-orange"><i class="fa-solid fa-heart mr-1"></i> 核心價值主張</strong>
+                        <p class="text-gray-600"><strong>B端：</strong>快速找到對的人、全套 HR 系統。<br><strong>C端：</strong>最多職缺、全職涯輔助。</p>
+                    </div>
+                </div>
+                <!-- Col 3: Customer Relationships & Channels -->
+                <div class="flex flex-col gap-2">
+                    <div class="bg-white p-3 rounded-lg border border-gray-100 h-1/2 flex flex-col justify-between">
+                        <strong class="text-brand-orange"><i class="fa-solid fa-face-smile mr-1"></i> 顧客關係</strong>
+                        <p class="text-gray-600">AI 智慧推薦、專屬企業客服、互動式社群（職涯診所）。</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border border-gray-100 h-1/2 flex flex-col justify-between">
+                        <strong class="text-brand-orange"><i class="fa-solid fa-route mr-1"></i> 渠道通路</strong>
+                        <p class="text-gray-600">104 官方網頁/App、實體就業博覽會、外部社群媒體。</p>
+                    </div>
+                </div>
+                <!-- Col 4: Customer Segments -->
+                <div class="bg-white p-3 rounded-lg border border-gray-100 flex flex-col justify-between">
+                    <strong class="text-brand-orange"><i class="fa-solid fa-users-viewfinder mr-1"></i> 顧客細分</strong>
+                    <div class="text-gray-600 space-y-2">
+                        <p><strong>B 端企業：</strong>需大量招募的中大企業與急需解決管理人事的中小企業。</p>
+                        <p><strong>C 端求職：</strong>社會新鮮人、在職轉職者、高階人才、銀髮族等。</p>
+                    </div>
+                </div>
+                <!-- Col 5: Cost Structure & Revenue Streams -->
+                <div class="flex flex-col gap-2">
+                    <div class="bg-white p-3 rounded-lg border border-gray-100 h-1/2 flex flex-col justify-between">
+                        <strong class="text-brand-orange"><i class="fa-solid fa-wallet mr-1"></i> 成本結構</strong>
+                        <p class="text-gray-600">研發工程師人力費用、伺服器雲端資安、大型廣告宣傳與行銷。</p>
+                    </div>
+                    <div class="bg-white p-3 rounded-lg border border-gray-100 h-1/2 flex flex-col justify-between">
+                        <strong class="text-brand-orange"><i class="fa-solid fa-coins mr-1"></i> 收入來源</strong>
+                        <p class="text-gray-600">職缺刊登費、首頁置頂廣告費、獵頭顧問成交抽成、SaaS系統訂閱費。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Challenges & Future Strategy -->
+        <div class="slide flex-col justify-center w-full max-w-5xl h-full" id="slide-9">
+            <h2 class="text-3xl font-extrabold text-brand-dark mb-6 border-l-8 border-brand-orange pl-4">
+                三大挑戰與轉型機會 <span class="text-brand-orange text-lg block md:inline md:ml-2">迎接少子化與 AI 時代的第二曲線</span>
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Challenges -->
+                <div class="bg-red-50 p-6 rounded-2xl border border-red-100 space-y-4">
+                    <h3 class="font-bold text-red-800 text-lg"><i class="fa-solid fa-triangle-exclamation mr-2"></i>當前的嚴峻挑戰</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-dark">1. 少子化衝擊 (人口負增長)</h4>
+                            <p class="text-xs text-gray-600">求職者數量急劇下滑，傳統「人口紅利」與「流量收費模式」面臨瓶頸。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-dark">2. 平台老化感與年輕人流失</h4>
+                            <p class="text-xs text-gray-600">Z 世代和 Alpha 世代偏好 Cake 或 LinkedIn 的流暢、極簡 UI，104 介面略顯臃腫。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-dark">3. AI 技術重組篩選模式</h4>
+                            <p class="text-xs text-gray-600">生成式 AI 的出現，可能讓傳統關鍵字匹配履歷機制失去競爭優勢。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Opportunities -->
+                <div class="bg-emerald-50 p-6 rounded-2xl border border-emerald-100 space-y-4">
+                    <h3 class="font-bold text-emerald-800 text-lg"><i class="fa-solid fa-rocket mr-2"></i>轉型與突圍戰略建議</h3>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-dark">1. 全面導入 AI 智能化媒合</h4>
+                            <p class="text-xs text-gray-600">引入生成式 AI 自動幫 C 端寫履歷、模擬面試；幫 B 端自動篩選、總結候選人潛力。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-dark">2. 深化「104企業大師 (HR SaaS)」</h4>
+                            <p class="text-xs text-gray-600">將收入核心從「一次性招募」升級為「日常人事考勤、發薪水」等企業高黏著訂閱服務。</p>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-brand-dark">3. 開發「銀髮族/二度就業」藍海</h4>
+                            <p class="text-xs text-gray-600">推動中高齡就業（104高年級計畫），將社會高齡化轉化為平台的全新增長點。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Conclusion & QA -->
+        <div class="slide flex-col justify-center items-center text-center max-w-4xl w-full h-full" id="slide-10">
+            <h2 class="text-brand-orange text-5xl mb-6 font-bold">Conclusion & Q&A</h2>
+            <h3 class="text-3xl md:text-4xl font-extrabold text-brand-dark mb-4">
+                謝謝吳家州教授與全班同學！
+            </h3>
+            <p class="text-lg text-brand-gray max-w-2xl mx-auto mb-8">
+                在雙邊平台、數位商模四象限與五力分析下，104 完美示範了如何利用組合式商模稱霸市場。面對少子化，這艘人力銀行航空母艦正往 AI 與 SaaS 生態系奮力起航。
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <div class="px-6 py-3 bg-white border border-gray-200 rounded-xl shadow-sm text-sm">
+                    <span class="block text-xs text-brand-gray">報告組員</span>
+                    <span class="font-bold text-brand-dark">N1135703 林于瑾 ／ N1135728 陳映帆</span>
+                </div>
+                <div class="px-6 py-3 bg-white border border-gray-200 rounded-xl shadow-sm text-sm">
+                    <span class="block text-xs text-brand-gray">指導老師</span>
+                    <span class="font-bold text-brand-orange">吳家州 老師</span>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- SPEAKER NOTES / SCRIPT DRAWER -->
+    <div class="bg-amber-50 border-t border-amber-200 px-6 py-4 z-10 shadow-lg">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-2">
+            <div class="flex items-center space-x-2 text-amber-800">
+                <i class="fa-solid fa-comment-dots text-lg"></i>
+                <span class="font-bold text-sm">口頭報告講稿 (讀稿機模式)：</span>
+                <span id="speaker-badge" class="bg-amber-200 text-amber-900 text-xs px-2 py-0.5 rounded-full font-bold">林于瑾</span>
+            </div>
+            <div class="text-xs text-amber-700 font-medium" id="speaker-script">
+                「吳老師、各位同學們大家晚上好！我是于瑾...」
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION CONTROLS -->
+    <footer class="bg-white border-t border-gray-200 px-6 py-4 flex justify-between items-center z-10 select-none">
+        <div class="text-xs text-brand-gray">
+            <kbd class="px-2 py-1 bg-gray-100 border rounded shadow-sm">←</kbd> 或 <kbd class="px-2 py-1 bg-gray-100 border rounded shadow-sm">→</kbd> 鍵可切換簡報
+        </div>
+        <div class="flex space-x-3">
+            <button onclick="prevSlide()" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-brand-dark font-bold text-sm rounded-lg transition">
+                <i class="fa-solid fa-chevron-left mr-1"></i> 上一頁
+            </button>
+            <button onclick="nextSlide()" class="px-5 py-2 bg-brand-orange hover:bg-orange-600 text-white font-bold text-sm rounded-lg transition shadow-sm">
+                下一頁 <i class="fa-solid fa-chevron-right ml-1"></i>
+            </button>
+        </div>
+    </footer>
+
+    <!-- PRESENTATION JAVASCRIPT LOGIC -->
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 10;
+
+        const scripts = {
+            1: {
+                speaker: "林于瑾",
+                text: "「吳老師、各位同學們大家晚上好！我是于瑾，今天我和我的夥伴映帆，將代表我們小組為大家帶來『104人力銀行的數位商務營利模式』個案探討。我們特別結合了吳家州老師在課堂上發給我們的數位營利模式講義，將 104 的商業運作拆解得非常透徹。以下我們將從雙邊市場出發，帶大家看懂這家台灣人力資源龍頭，到底是『怎麼賺錢的』！」"
+            },
+            2: {
+                speaker: "林于瑾",
+                text: "「首先，大家對 104 一定不陌生。自 1996 年創立以來，它就是台灣網際網路發展史上的傳奇。作為台灣第一家股票上市的網路公司，它擁有超過 800 萬的個人會員，這相當於台灣三分之一以上的人口都在 104 上有履歷。然而，一個看似『讓求職者免費找工作』的網站，背後卻支撐著數十億的年營收。這到底是怎麼辦到的？我們需要導入第一個企管精神：雙邊市場理論。」"
+            },
+            3: {
+                speaker: "林于瑾",
+                text: "「在企管學中，104 是一個非常經典的『雙邊市場』。它面臨著經典的『雞生蛋、蛋生雞』問題。104 的策略非常聰明，它對『個人求職者』採取完全免費的補貼策略。根據梅特卡夫定律，當平台上累積的求職者數量呈現指數成長時，平台的價值也會呈現爆炸性上升。這時候，急需人才的『企業端』就產生了極高的付費意願。104 成功跨越了臨界點，形成了無法被輕易動搖的雙邊正向網路效應。」"
+            },
+            4: {
+                speaker: "林于瑾",
+                text: "「現在，讓我們將視角帶入吳家州老師課堂講義中的核心模型。請參考講義 S__45473799.jpg 與 S__45473800.jpg。老師提到平台服務商的五大營利模式，104 竟然同時靈活運用了其中四種！廣告營收、訂閱營收、抽成合作與手續費收費。這完全扣合了老師講義中，每一種營利模式需要對應的成功門檻和商業價值要件。」"
+            },
+            5: {
+                speaker: "陳映帆",
+                text: "「（接棒報告）謝謝于瑾。接下來由映帆為大家說明。請大家看向講義 S__45473801.jpg。吳老師在課堂上強調，數位營利模式的判斷與選擇，關鍵在於『使用頻率』與『單次客單價值』的交織。我們將 104 的產品線套入這個矩陣。它利用免費的 C 端服務做大流量，然後在『高頻 × 高客單』的 B 端訂閱（VIP人才庫）與『低頻 × 高客單』的精品獵才服務上賺取高額利潤。這就是講義中提到的『組合式收費商模』。」"
+            },
+            6: {
+                speaker: "陳映帆",
+                text: "「為了讓這份報告更有企管系的高度，我們進一步將 104 與全球社群徵才龍頭 LinkedIn 進行深度對標。兩者的底層邏輯截然不同：104 是典型的『工具型平台』，使用者通常是『有求職需求』時才會上線，這導致 C 端的日常活躍度較難維持。因此 104 必須依靠強大的 B 端企業端服務來變現。相較之下，LinkedIn 是『社群型平台』，它透過專業人脈網絡，讓 C 端用戶在平常不找工作時也會上線交流，進而成功在 C 端實行了『Premium 會員訂閱模式』。這一點是 104 在未來拓展 C 端商模時非常值得借鑑與思考的方向。」"
+            },
+            7: {
+                speaker: "陳映帆",
+                text: "「接著，我們用管理學經典的『波特五力模型』來審視 104 面臨的競爭格局。雖然 104 在台灣有絕對的領先地位，但現在的威脅正從四面八方湧來。特別是『行業內競爭者』，像是新興的 Cake (原CakeResume)，以精美的履歷工具和現代化的 UI 介面，深受科技業與年輕求職者的喜愛。同時，『替代品威脅』也不容忽視，越來越多外商和科技巨頭直接在 LinkedIn 或自家的官網上招募，跳過了 104。這使得 104 的護城河正受到考驗。」"
+            },
+            8: {
+                speaker: "林于瑾",
+                text: "「為了將前面所講的所有營運細節做系統化的統合，我們為 104 繪製了這張『商業模式畫布』。大家可以看到，104 的『核心價值主張』已經不單單是幫人找工作，而是圍繞著『人脈與職涯全週期』。它強大的『關鍵資源』—— 也就是這 20 多年來累積的龐大履歷與企業數據庫，是它最強大的護城河，也是其『收入來源』能夠如此多元化、健全發展的根本原因。」"
+            },
+            9: {
+                speaker: "陳映帆",
+                text: "「最後，我們為 104 提出未來的轉型建議。104 目前正面臨台灣社會『少子化』與『人才荒』的最大挑戰。當人越來越難找，104 該怎麼辦？我們建議 104 必須進行三大轉型：第一，全面 AI 化。利用 AI 降低求職與篩選的時間成本。第二，開發新藍海：這正好呼應了 104 近年推出的『高年級計畫』。協助銀髮族與二度就業人才重返職場。第三，深化 SaaS 服務，讓企業發薪水、打卡也用 104 企業大師，從而形成無法割捨的極高轉換成本。」"
+            },
+            10: {
+                speaker: "林/陳 合意",
+                text: "「總結來說，104 人力銀行的成功並非偶然，而是完美實踐了我們課堂上所學的『數位商務營利模式』。我們相信，唯有不斷創新的商業模式，才能在快速變動的數位時代中立於不敗之地。我們的報告到此結束，再次感謝吳家州老師這學期精彩的授課，也謝謝大家的聆聽！現在歡迎老師以及同學們提問，謝謝大家！」"
+            }
+        };
+
+        function updateSlide() {
+            // Hide all slides
+            for (let i = 1; i <= totalSlides; i++) {
+                document.getElementById(`slide-${i}`).classList.remove('active');
+            }
+            // Show active slide
+            document.getElementById(`slide-${currentSlide}`).classList.add('active');
+
+            // Update progress & labels
+            document.getElementById('slide-indicator').innerText = `Slide ${currentSlide} / ${totalSlides}`;
+            document.getElementById('progress-bar').style.width = `${(currentSlide / totalSlides) * 100}%`;
+
+            // Update speaker notes
+            const currentScript = scripts[currentSlide];
+            document.getElementById('speaker-badge').innerText = currentScript.speaker;
+            document.getElementById('speaker-script').innerText = currentScript.text;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        // Keyboard Navigation Controls
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ' || event.key === 'Enter') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                prevSlide();
+            }
+        });
+
+        // Initialize first slide script
+        window.onload = function() {
+            updateSlide();
+        };
+    </script>
+</body>
+</html>
